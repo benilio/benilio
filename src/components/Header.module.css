@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+  .header {
+    @apply sticky top-0 z-50 flex justify-between py-8 px-24 bg-dark-lighter/95;
+  }
+
+  .logo {
+    @apply text-lg font-semibold tracking-wide text-accent;
+  }
+
+  .logo img {
+    @apply inline-block mr-1 h-6;
+  }
+}

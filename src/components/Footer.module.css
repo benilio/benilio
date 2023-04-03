@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+  .footer {
+    @apply container mx-auto flex md:flex-row flex-col md:justify-between py-8 md:text-sm md:font-semibold text-lg;
+  }
+
+  .footer > div > ul > li:not(:last-child) {
+    @apply mr-6;
+  }
+
+  .footer > div > ul > li {
+    @apply block md:inline-block;
+  }
+}

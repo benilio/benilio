@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+  .contact {
+    @apply container mx-auto bg-dark-darker/10 border-2 border-dark-darker/20 rounded-lg p-12 text-center;
+  }
+
+  .contact h3 {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .contact a {
+    @apply text-3xl font-medium text-accent;
+  }
+}

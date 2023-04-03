@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Manrope", system-ui, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+  html {
+    @apply bg-dark-lighter text-light px-24 leading-relaxed;
+  }
+
+  a {
+    @apply transition-all ease-in-out duration-300;
+  }
+
+  a:hover {
+    @apply opacity-70;
+  }
+
+  em {
+    @apply font-bold;
+  }
+}
