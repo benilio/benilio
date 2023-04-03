@@ -2,8 +2,8 @@ import classes from "./Projects.module.css";
 
 import Image from "../../components/Project/ProjectImage";
 
-import Backgrounds from "../../assets/projects/02/backgrounds.png";
-import MultipleScreens from "../../assets/projects/02/multiple_screens.png";
+import Backgrounds from "../../assets/projects/02/backgrounds.webp";
+import MultipleScreens from "../../assets/projects/02/multiple_screens.webp";
 
 function Geomechanical() {
   return (

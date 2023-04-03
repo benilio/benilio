@@ -2,8 +2,8 @@ import classes from "./Projects.module.css";
 
 import Image from "../../components/Project/ProjectImage";
 
-import Process from "../../assets/projects/01/process.png";
-import MultipleScreens from "../../assets/projects/01/multiple_screens.png";
+import Process from "../../assets/projects/01/process.webp";
+import MultipleScreens from "../../assets/projects/01/multiple_screens.webp";
 
 function Geological() {
   return (

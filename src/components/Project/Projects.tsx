@@ -1,8 +1,8 @@
 import ProjectCard from "./ProjectCard";
 import classes from "./Projects.module.css";
 
-import coverGeological from "../../assets/projects/01/cover.png";
-import coverGeomechanical from "../../assets/projects/02/cover.png";
+import coverGeological from "../../assets/projects/01/cover.webp";
+import coverGeomechanical from "../../assets/projects/02/cover.webp";
 
 function Projects() {
   return (
