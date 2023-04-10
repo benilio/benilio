@@ -1,18 +1,74 @@
-import { Link } from "react-router-dom";
-import Navigation from "./Navigation";
+import { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { HiBars3, HiXMark } from "react-icons/hi2";
+
+import ScrollTo from "./Hooks/ScrollTo";
 
 import Trex from "./../assets/trex.svg";
-import classes from "./Header.module.css";
+import "../styles/Header.css";
 
 function Header() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(true);
+  const ref = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: any) {
+      if (ref.current && !ref.current?.contains(event.target)) {
+        setIsNavbarOpen(true);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
+  const Items = [
+    { label: "Projects", link: "/#projects" },
+    { label: "About", link: "/#about" },
+    { label: "Contact", link: "/#contact" },
+  ];
+
   return (
-    <header className={classes.header}>
-      <div className={classes.logo}>
-        <Link to="/">
-          <img src={Trex} alt="Trex Emoji" /> benilio.
-        </Link>
+    <header className="header">
+      <ScrollTo />
+      <div className="logo_menu">
+        <div className="logo">
+          <NavLink to="/">
+            <img src={Trex} alt="Trex Emoji" />{" "}
+            <span className="logo__name">benilio.</span>
+          </NavLink>
+        </div>
+
+        <div className="menu" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
+          {isNavbarOpen ? (
+            <HiBars3 title="menu" className="menu__icon" />
+          ) : (
+            <HiXMark title="menu" className="menu__icon" />
+          )}
+        </div>
       </div>
-      <Navigation />
+
+      <nav
+        ref={ref}
+        className={`navigation ${isNavbarOpen ? "hidden" : "flex"} }
+        md:flex`}
+      >
+        <ul>
+          {Items.map((Item) => (
+            <li>
+              <NavLink
+                onClick={() => setIsNavbarOpen(true)}
+                className="navigaton__link"
+                to={Item.link}
+              >
+                {Item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

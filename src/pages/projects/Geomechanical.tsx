@@ -1,19 +1,19 @@
-import classes from "./Projects.module.css";
+import "../../styles/Projects.css";
 
 import Image from "../../components/Project/ProjectImage";
 
-import Backgrounds from "../../assets/projects/02/backgrounds.webp";
-import MultipleScreens from "../../assets/projects/02/multiple_screens.webp";
+import Backgrounds from "../../assets/projects/geomechanical/backgrounds.webp";
+import MultipleScreens from "../../assets/projects/geomechanical/multiple_screens.webp";
 
 function Geomechanical() {
   return (
-    <main className={classes.project}>
-      <section className={classes.project__header}>
+    <main className="project">
+      <section className="project__header">
         <h1>Integrated Geomechanical Analysis Software</h1>
         <h2>@ MDGeo Team, Tecgraf Institute/PUC-Rio</h2>
         <h3>UI/UX Design, 2019-present</h3>
       </section>
-      <div className={classes.project__description}>
+      <div className="project__description">
         <section>
           <h4>Project Overview</h4>
           <p>
@@ -62,7 +62,7 @@ function Geomechanical() {
         />
       </section>
       <section>
-        <p className="text-center py-16">
+        <p className="py-16 text-center">
           This project is owned by <em>PETROBRAS</em> and{" "}
           <em>Tecgraf/PUC-Rio Institute</em>.<br /> (c) All Rights Reserved.
         </p>

@@ -3,6 +3,8 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
+      transparent: "transparent",
+      current: "currentColor",
       light: "#dddcdd",
       dark: {
         darker: "#040300",

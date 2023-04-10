@@ -1,0 +1,35 @@
+@tailwind components;
+
+@layer components {
+  .project h1 {
+    @apply text-accent text-4xl font-extrabold;
+  }
+
+  .project h2 {
+    @apply text-2xl font-bold;
+  }
+
+  .project h3 {
+    @apply text-xl font-semibold opacity-70;
+  }
+
+  .project h4 {
+    @apply text-accent text-lg font-semibold;
+  }
+
+  .project section > ul {
+    @apply flex;
+  }
+
+  .project__header {
+    @apply container mx-auto  py-16;
+  }
+
+  .project__description {
+    @apply container mx-auto mb-8 flex flex-col gap-8 md:flex-row;
+  }
+
+  .project__description p {
+    @apply mt-2;
+  }
+}

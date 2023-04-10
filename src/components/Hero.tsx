@@ -1,16 +1,14 @@
-import classes from "./Hero.module.css";
+import "../styles/Hero.css";
 
 function Hero() {
   return (
-    <section className={classes.hero}>
+    <section className="hero">
       <h1>
-        <span className={classes.hero__faded}>Hey, there.</span>
+        <span className="hero__faded">Hey, there.</span>
       </h1>
       <h2>
         I'm Benício — an UI/UX Designer and Frontend Developer{" "}
-        <span className={classes.hero__faded}>
-          based in Rio de Janeiro, Brazil.
-        </span>
+        <span className="hero__faded">based in Rio de Janeiro, Brazil.</span>
       </h2>
     </section>
   );

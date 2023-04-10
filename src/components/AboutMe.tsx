@@ -1,8 +1,8 @@
-import classes from "./About.module.css";
+import "../styles/About.css";
 
 function AboutMe() {
   return (
-    <section id="about" className={classes.about}>
+    <section id="about" className="about">
       <h3>About me</h3>
       <p>
         I'm a curious individual that loves to learn about new things and

@@ -1,19 +1,19 @@
-import classes from "./Projects.module.css";
+import "../../styles/Projects.css";
 
 import Image from "../../components/Project/ProjectImage";
 
-import Process from "../../assets/projects/01/process.webp";
-import MultipleScreens from "../../assets/projects/01/multiple_screens.webp";
+import Process from "../../assets/projects/geological/process.webp";
+import MultipleScreens from "../../assets/projects/geological/multiple_screens.webp";
 
 function Geological() {
   return (
-    <main className={classes.project}>
-      <section className={classes.project__header}>
+    <main className="project">
+      <section className="project__header">
         <h1>Restoration and Simulation of Geological Models Software</h1>
         <h2>@ MDGeo Team, Tecgraf Institute/PUC-Rio</h2>
         <h3>UI/UX Design, 2019-present</h3>
       </section>
-      <div className={classes.project__description}>
+      <div className="project__description">
         <section>
           <h4>Project Overview</h4>
           <p>
@@ -72,7 +72,7 @@ function Geological() {
         />
       </section>
       <section>
-        <p className="text-center py-16">
+        <p className="py-16 text-center">
           This project is owned by <em>PETROBRAS</em> and{" "}
           <em>Tecgraf/PUC-Rio Institute</em>.<br /> (c) All Rights Reserved.
         </p>

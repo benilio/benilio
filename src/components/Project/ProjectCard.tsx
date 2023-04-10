@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import classes from "./ProjectCard.module.css";
+import "../../styles/ProjectCard.css";
 
 function ProjectCard({
   projectLink,
@@ -15,9 +15,9 @@ function ProjectCard({
   projectCoverAltText: string;
 }) {
   return (
-    <Link className={classes.project__card} to={projectLink}>
+    <Link className="project__card" to={projectLink}>
       <img src={projectCoverSrc} alt={projectCoverAltText} />
-      <div className={classes.project__details}>
+      <div className="project__details">
         <h3>{projectName}</h3>
         <h4>{projectType}</h4>
       </div>
