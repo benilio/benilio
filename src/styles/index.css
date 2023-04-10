@@ -15,16 +15,16 @@
 }
 
 @layer base {
+  * {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
   html {
     @apply bg-dark-lighter text-light  leading-relaxed;
   }
 
   main {
     @apply mt-24 w-full px-8;
-  }
-
-  a {
-    @apply transition-all duration-300 ease-in-out;
   }
 
   a:hover {
