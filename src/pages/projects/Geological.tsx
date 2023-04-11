@@ -1,4 +1,4 @@
-import "../../styles/Projects.css";
+import "../../styles/Project.css";
 
 import Image from "../../components/Project/ProjectImage";
 

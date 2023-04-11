@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-function Error() {
+export default function Error() {
   return (
     <>
       <Header />
@@ -13,5 +13,3 @@ function Error() {
     </>
   );
 }
-
-export default Error;

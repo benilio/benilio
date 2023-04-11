@@ -4,10 +4,10 @@ function SEO() {
   return (
     <SuperSEO
       title="Benício Oliveira"
-      description="Benício Oliveira is an UI/UX designer and Frontend Developer."
+      description="Benício Oliveira is an UI/UX Designer and Frontend Developer."
       lang="en"
       charset="UTF-8"
-      robots="noindex, nofollow"
+      // robots="noindex, nofollow"
     />
   );
 }

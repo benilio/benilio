@@ -6,7 +6,7 @@
   }
 
   .hero h1 {
-    @apply text-4xl font-semibold leading-tight md:text-6xl md:leading-snug;
+    @apply text-light text-4xl font-semibold leading-tight md:text-6xl md:leading-snug;
   }
 
   .hero h2 {
