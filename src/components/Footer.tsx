@@ -14,7 +14,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer__signature">
         Built with <HiHeart title="love" className="text-accent" /> and{" "}
-        <HiMusicalNote title="music" className="text-[#AF7FEF]" />
+        <HiMusicalNote title="music" />
       </div>
       <div>
         <ul>

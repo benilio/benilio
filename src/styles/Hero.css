@@ -6,11 +6,11 @@
   }
 
   .hero h1 {
-    @apply text-2xl font-semibold leading-tight md:text-6xl md:leading-snug;
+    @apply text-4xl font-semibold leading-tight md:text-6xl md:leading-snug;
   }
 
   .hero h2 {
-    @apply text-xl font-semibold leading-normal md:text-5xl md:leading-snug;
+    @apply text-3xl font-semibold leading-normal md:text-5xl md:leading-snug;
   }
 
   .hero__faded {

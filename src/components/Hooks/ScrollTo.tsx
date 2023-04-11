@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/61779236/how-to-navigate-to-another-page-with-a-smooth-scroll-on-a-specific-id-with-react/61784812#61784812
+
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 

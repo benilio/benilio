@@ -1,15 +1,19 @@
 @tailwind components;
 
 @layer components {
+  #contact {
+    @apply scroll-mt-28;
+  }
+
   .contact {
-    @apply container mx-auto bg-dark-darker/10 border-2 border-dark-darker/20 rounded-lg p-12 text-center;
+    @apply bg-dark-darker/10 border-dark-darker/20 container mx-auto rounded-lg border-2 p-12 text-center;
   }
 
   .contact h3 {
-    @apply text-2xl font-bold mb-2;
+    @apply mb-2 text-2xl font-bold;
   }
 
   .contact a {
-    @apply text-3xl font-medium text-accent;
+    @apply text-accent text-3xl font-medium;
   }
 }

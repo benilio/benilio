@@ -2,7 +2,7 @@
 
 @layer components {
   .header {
-    @apply bg-dark-lighter/95 fixed top-0 z-50 flex w-full flex-col justify-between px-4 py-3 shadow-lg backdrop-blur-sm md:flex-row md:items-center;
+    @apply bg-dark-lighter/95 fixed top-0 z-50 flex w-full flex-col justify-between px-4 py-3 backdrop-blur-sm md:flex-row md:items-center;
   }
 
   .logo_menu {

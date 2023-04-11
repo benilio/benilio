@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
 import ScrollTo from "./Hooks/ScrollTo";
+import useScrollPosition from "./Hooks/useScrollPosition";
 
 import Trex from "./../assets/trex.svg";
 import "../styles/Header.css";
@@ -10,6 +11,7 @@ import "../styles/Header.css";
 function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(true);
   const ref = useRef<HTMLInputElement>(null);
+  const scrollPosition = useScrollPosition();
 
   useEffect(() => {
     function handleClickOutside(event: any) {
@@ -31,7 +33,7 @@ function Header() {
   ];
 
   return (
-    <header className="header">
+    <header className={`header ${scrollPosition >= 100 ? "shadow-lg" : ""}`}>
       <ScrollTo />
       <div className="logo_menu">
         <div className="logo">

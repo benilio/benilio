@@ -1,11 +1,15 @@
 @tailwind components;
 
 @layer components {
+  #projects {
+    @apply scroll-mt-28;
+  }
+
   .projects {
-    @apply flex md:flex-row flex-col gap-4 mb-4 justify-center;
+    @apply mb-4 flex flex-col justify-center gap-4 md:flex-row;
   }
 
   .projects img {
-    @apply rounded-t-lg w-full h-auto object-cover align-middle;
+    @apply h-auto w-full rounded-t-lg object-cover align-middle;
   }
 }

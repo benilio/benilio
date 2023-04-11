@@ -20,7 +20,7 @@
   }
 
   html {
-    @apply bg-dark-lighter text-light  leading-relaxed;
+    @apply bg-dark-lighter text-light leading-relaxed;
   }
 
   main {
