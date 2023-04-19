@@ -2,15 +2,15 @@
 
 @layer components {
   .project h1 {
-    @apply text-accent text-4xl font-extrabold;
+    @apply text-accent text-2xl font-extrabold md:text-4xl;
   }
 
   .project h2 {
-    @apply text-2xl font-bold;
+    @apply text-xl font-bold md:text-2xl;
   }
 
   .project h3 {
-    @apply text-xl font-semibold opacity-70;
+    @apply text-lg font-semibold opacity-70 md:text-xl;
   }
 
   .project h4 {

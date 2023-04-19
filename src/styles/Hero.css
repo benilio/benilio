@@ -2,15 +2,15 @@
 
 @layer components {
   .hero {
-    @apply mx-auto w-4/5 py-32;
+    @apply mx-auto w-4/5 py-24 md:py-32;
   }
 
   .hero h1 {
-    @apply text-light text-4xl font-semibold leading-tight md:text-6xl md:leading-snug;
+    @apply text-light text-2xl font-semibold leading-tight md:text-5xl md:leading-snug;
   }
 
   .hero h2 {
-    @apply text-3xl font-semibold leading-normal md:text-5xl md:leading-snug;
+    @apply text-2xl font-semibold leading-normal md:text-5xl md:leading-snug;
   }
 
   .hero__faded {

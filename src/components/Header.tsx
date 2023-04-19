@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
-import ScrollTo from "./Hooks/ScrollTo";
-import useScrollPosition from "./Hooks/useScrollPosition";
+import ScrollTo from "../hooks/ScrollTo";
+import useScrollPosition from "../hooks/useScrollPosition";
 
 import Trex from "./../assets/trex.svg";
 import "../styles/Header.css";

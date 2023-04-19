@@ -6,7 +6,7 @@
   }
 
   .projects {
-    @apply mb-4 flex flex-col justify-center gap-4 md:flex-row;
+    @apply mb-4 flex flex-col justify-center gap-8 md:flex-row;
   }
 
   .projects img {

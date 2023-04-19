@@ -2,11 +2,11 @@
 
 @layer components {
   .project__card {
-    @apply basis-1/2 rounded-xl border-2 border-dark-darker/20;
+    @apply border-dark-darker/20 flex basis-1/2 flex-col rounded-xl border-2;
   }
 
   .project__details {
-    @apply bg-dark-darker bg-opacity-30 rounded-b-lg py-5 px-6;
+    @apply bg-dark-darker flex-1 rounded-b-lg bg-opacity-30 px-6 py-5;
   }
 
   .project__details h3 {
