@@ -1,19 +1,19 @@
 @tailwind components;
 
 @layer components {
-  .footer {
-    @apply order-2 flex w-full flex-col-reverse items-center gap-4 px-8 py-8 font-semibold md:flex-row md:justify-between;
-  }
+	.footer {
+		@apply order-2 mx-auto flex w-full max-w-screen-2xl flex-col-reverse items-center gap-4 px-8 py-8 font-semibold md:flex-row md:justify-between;
+	}
 
-  .footer__signature {
-    @apply flex items-center gap-1;
-  }
+	.footer__signature {
+		@apply flex items-center gap-1;
+	}
 
-  .footer ul {
-    @apply flex items-center gap-4 md:flex-row md:gap-6;
-  }
+	.footer ul {
+		@apply flex items-center gap-4 md:flex-row md:gap-6;
+	}
 
-  .footer ul > li a {
-    @apply flex items-center gap-2 text-lg;
-  }
+	.footer ul > li a {
+		@apply flex items-center gap-2 text-lg;
+	}
 }

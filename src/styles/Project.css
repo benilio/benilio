@@ -1,35 +1,46 @@
+@tailwind base;
 @tailwind components;
 
+@layer base {
+	[data-rmiz-modal-overlay='visible'] {
+		@apply bg-dark-lighter !important;
+	}
+}
+
 @layer components {
-  .project h1 {
-    @apply text-accent text-2xl font-extrabold md:text-4xl;
-  }
+	.project h1 {
+		@apply text-2xl font-extrabold text-accent md:text-4xl;
+	}
 
-  .project h2 {
-    @apply text-xl font-bold md:text-2xl;
-  }
+	.project h2 {
+		@apply text-xl font-bold md:text-2xl;
+	}
 
-  .project h3 {
-    @apply text-lg font-semibold opacity-70 md:text-xl;
-  }
+	.project h3 {
+		@apply text-lg font-semibold opacity-70 md:text-xl;
+	}
 
-  .project h4 {
-    @apply text-accent text-lg font-semibold;
-  }
+	.project h4 {
+		@apply text-lg font-semibold text-accent;
+	}
 
-  .project section > ul {
-    @apply flex;
-  }
+	.project section > ul {
+		@apply flex;
+	}
 
-  .project__header {
-    @apply container mx-auto  py-16;
-  }
+	.project__header {
+		@apply container mx-auto  py-16;
+	}
 
-  .project__description {
-    @apply container mx-auto mb-8 flex flex-col gap-8 md:flex-row;
-  }
+	.project__description {
+		@apply container mx-auto mb-8 flex flex-col gap-8 md:flex-row;
+	}
 
-  .project__description p {
-    @apply mt-2;
-  }
+	.project__description p {
+		@apply mt-2;
+	}
+
+	.project__image {
+		@apply rounded-xl drop-shadow-md;
+	}
 }
