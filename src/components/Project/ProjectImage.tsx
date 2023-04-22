@@ -11,6 +11,8 @@ function Image({
 	imageAltText: string
 }) {
 	const [useAspectRatio, setAspectRatio] = useState(0)
+	const [useWidth, setWidth] = useState(0)
+	const [useHeight, setHeight] = useState(0)
 
 	return (
 		<Zoom>
@@ -21,9 +23,12 @@ function Image({
 				onLoad={({ target }) => {
 					const { naturalWidth, naturalHeight } = target as HTMLImageElement
 					setAspectRatio(naturalWidth / naturalHeight)
-					console.log(naturalWidth, naturalHeight)
+					setWidth(naturalWidth)
+					setHeight(naturalHeight)
 				}}
 				aspect-ratio={useAspectRatio}
+				width={useWidth}
+				height={useHeight}
 				className='project__image'
 			/>
 

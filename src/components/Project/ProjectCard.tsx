@@ -16,6 +16,8 @@ function ProjectCard({
 	projectCoverAltText: string
 }) {
 	const [useAspectRatio, setAspectRatio] = useState(0)
+	const [useWidth, setWidth] = useState(0)
+	const [useHeight, setHeight] = useState(0)
 
 	return (
 		<Link
@@ -28,9 +30,12 @@ function ProjectCard({
 				onLoad={({ target }) => {
 					const { naturalWidth, naturalHeight } = target as HTMLImageElement
 					setAspectRatio(naturalWidth / naturalHeight)
-					console.log(naturalWidth, naturalHeight)
+					setWidth(naturalWidth)
+					setHeight(naturalHeight)
 				}}
 				aspect-ratio={useAspectRatio}
+				width={useWidth}
+				height={useHeight}
 			/>
 			<div className='project__details'>
 				<h3>{projectName}</h3>

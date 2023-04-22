@@ -42,6 +42,9 @@ function Header() {
 							<img
 								src={Trex}
 								alt='Trex Emoji'
+								aspect-ratio='1:1'
+								width='32'
+								height='32'
 							/>{' '}
 							<span className='logo__name'>benilio.</span>
 						</NavLink>
