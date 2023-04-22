@@ -27,9 +27,9 @@ function Header() {
 	}, [ref])
 
 	const Items = [
-		{ label: 'Projects', link: '/#projects' },
-		{ label: 'About', link: '/#about' },
-		{ label: 'Contact', link: '/#contact' },
+		{ key: 1, label: 'Projects', link: '/#projects' },
+		{ key: 2, label: 'About', link: '/#about' },
+		{ key: 3, label: 'Contact', link: '/#contact' },
 	]
 
 	return (
@@ -70,7 +70,7 @@ function Header() {
 				>
 					<ul>
 						{Items.map((Item) => (
-							<li>
+							<li key={Item.key}>
 								<NavLink
 									onClick={() => setIsNavbarOpen(true)}
 									className='navigaton__link'
