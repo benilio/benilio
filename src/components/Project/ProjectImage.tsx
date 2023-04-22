@@ -29,6 +29,7 @@ function Image({
 				aspect-ratio={useAspectRatio}
 				width={useWidth}
 				height={useHeight}
+				loading='lazy'
 				className='project__image'
 			/>
 
