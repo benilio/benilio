@@ -15,7 +15,8 @@
 }
 
 @layer base {
-	* {
+	a,
+	a:hover {
 		@apply transition-all duration-300 ease-in-out;
 	}
 

@@ -13,14 +13,14 @@ function Projects() {
 					projectName='Restoration and Simulation of Geological Models Software'
 					projectType='UI/UX Design'
 					projectCoverSrc={coverGeological}
-					projectCoverAltText='imagem'
+					projectCoverAltText='Software screens and Desktop with software open and running'
 				/>
 				<ProjectCard
 					projectLink='/projects/geomechanical/'
 					projectName='Integrated Geomechanical Analysis Software'
 					projectType='UI/UX Design'
 					projectCoverSrc={coverGeomechanical}
-					projectCoverAltText='imagem'
+					projectCoverAltText='Software screens and Laptop with software open and running'
 				/>
 			</div>
 		</section>

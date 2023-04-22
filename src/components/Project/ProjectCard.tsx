@@ -45,6 +45,7 @@ function ProjectCard({
 					coverSrc +
 					`_3200.webp 3200w`
 				}
+				sizes='100vw'
 				onLoad={({ target }) => {
 					const { naturalWidth, naturalHeight } = target as HTMLImageElement
 					setAspectRatio(naturalWidth / naturalHeight)
