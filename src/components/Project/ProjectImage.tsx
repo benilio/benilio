@@ -6,9 +6,11 @@ import '../../styles/Project.css'
 function Image({
 	imageSrc,
 	imageAltText,
+	addClasses,
 }: {
 	imageSrc: string
 	imageAltText: string
+	addClasses?: string
 }) {
 	const [useAspectRatio, setAspectRatio] = useState(0)
 	const [useWidth, setWidth] = useState(0)
@@ -16,7 +18,6 @@ function Image({
 
 	return (
 		<Zoom>
-			{/* <a href={imageSrc} target='_blank' > */}
 			<img
 				src={imageSrc}
 				alt={imageAltText}
@@ -30,10 +31,8 @@ function Image({
 				width={useWidth}
 				height={useHeight}
 				loading='lazy'
-				className='project__image'
+				className={`project__image ${addClasses}`}
 			/>
-
-			{/* </a> */}
 		</Zoom>
 	)
 }

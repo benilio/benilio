@@ -11,7 +11,7 @@ function Geological() {
 			<section className='project__header'>
 				<h1>Restoration and Simulation of Geological Models Software</h1>
 				<h2>@ MDGeo Team, Tecgraf Institute/PUC-Rio</h2>
-				<h3>UI/UX Design, 2019-present</h3>
+				<h3>UI/UX Design, 2019&#8211;present</h3>
 			</section>
 			<div className='project__description'>
 				<section>
@@ -61,7 +61,7 @@ function Geological() {
 					</p>
 				</section>
 			</div>
-			<section className='flex flex-col gap-4'>
+			<section className='project__gallery'>
 				<Image
 					imageSrc={Process}
 					imageAltText='Three laptops with different software screens'
