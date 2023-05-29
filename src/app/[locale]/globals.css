@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-600;
+  }
+
+  body {
+    @apply font-body bg-gray-700 text-gray-100;
+  }
+
+  a:hover {
+    @apply hover:text-gray-300 transition-colors;
+  }
+
+  em {
+    @apply font-bold;
+  }
+}

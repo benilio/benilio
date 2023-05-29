@@ -1,0 +1,28 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navigation {
+    @apply flex items-center justify-between px-12 py-8;
+  }
+
+  .navigation__logo {
+    @apply font-title text-4xl;
+  }
+
+  .navigation__items {
+    @apply flex items-center justify-center gap-4;
+  }
+
+  .navigation__item {
+    @apply font-subtitle uppercase;
+  }
+
+  .navigation__plus {
+    @apply flex items-center justify-between gap-3;
+  }
+
+  .navigation__locale {
+    @apply flex items-center justify-center gap-4 p-4 rounded-full border-3 border-gray-500;
+  }
+}
