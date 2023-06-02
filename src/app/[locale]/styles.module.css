@@ -2,12 +2,13 @@
 @tailwind utilities;
 
 @layer components {
+  /* common / global */
   .navigation {
     @apply flex items-center justify-between px-12 py-8;
   }
 
   .navigation__logo {
-    @apply font-title text-4xl;
+    @apply font-title text-4xl cursor-pointer;
   }
 
   .navigation__items {
@@ -24,5 +25,39 @@
 
   .navigation__locale {
     @apply flex items-center justify-center gap-4 p-4 rounded-full border-3 border-gray-500;
+  }
+
+  .navigation__locale__inactive {
+    @apply grayscale-[65%] hover:grayscale-0 transition ease-in-out duration-200 delay-75;
+  }
+
+  .section {
+    @apply mx-auto container px-24;
+  }
+
+  /* home */
+
+  .section_heading {
+    @apply font-title text-6xl py-24;
+  }
+
+  .project_heading {
+    @apply absolute bottom-0 font-title lowercase px-16 py-12 text-4xl [text-shadow:_0_3px_6px_rgb(0_0_0_/_25%)];
+  }
+
+  .project_container {
+    @apply col-span-9 relative rounded-[4.5rem] overflow-clip;
+  }
+
+  .project_container__background {
+    @apply bg-black/25 absolute top-0 h-full w-full;
+  }
+
+  .project_container__gradient {
+    @apply bg-gradient-to-t from-gray-800/75 to-transparent absolute bottom-0 h-1/2 w-full;
+  }
+
+  .colophon_heading {
+    @apply font-subtitle text-xl;
   }
 }

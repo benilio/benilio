@@ -11,29 +11,40 @@
     "home": "Home",
     "projects": "Projects",
     "about": "About",
-    "resume": "Resume"
+    "resume": {
+      "title": "Resume",
+      "file": "Resume"
+    },
+    "locale": "en"
   },
-  "Index": {
-    "hero": {
-      "title": "<paragraph>Benício Oliveira is a</paragraph> <heading>Designer & <small>(in progress, self-taught)</small></heading> <heading>Frontend Developer</heading>",
-      "subtitle": "He's a curious person, self-driven, passionate about knowledge and human interactions. Big time cat lover and amateur cooker.",
-      "scroll": "scroll for more"
+  "Hero": {
+    "title": "<paragraph>Benício Oliveira is a</paragraph> <heading>Designer & <small>(in progress, self-taught)</small></heading> <heading>Frontend Developer</heading>",
+    "subtitle": "He's a curious person, self-driven, passionate about knowledge and human interactions. Big time cat lover and amateur cooker.",
+    "scroll": "scroll for more"
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "geological": "Restoration and Simulation of Geological Models Software"
+  },
+  "About": {
+    "title": "About Me",
+    "description": "<paragraph>I'm a curious individual that loves to learn about how things work and languages. I'm specially passionate in trying to understand people's point of view and how their differences - be it cultural, geographical or others - impact on each individual's thoughts, feelings and how that affect how they interact with things. More often than not, you might find me tinkering with some old piece of tech that probably doesn't work anymore, but at least I'll try to understand how it used to work or give it a new meaning.</paragraph><paragraph>I've already studied a couple of languages, but I haven't had much time to practice or put them in use, but in general, I like learning new languages because it helps understand another's culture, history and even their thought process. Some of those languages: korean, french, spanish, chinese.</paragraph>",
+    "bubbles": {
+      "me": "<item>aquarius</item><item>infp</item><item>a+</item><item>lgbtqia+</item>",
+      "music": "<item>k-pop</item><item>punk rock</item><item>hip hop</item><item>country</item><small>(almost) everything</small>",
+      "likes": "<item>cats</item><item>time travel</item><item>games</item><item>digimon</item><item>photography</item>",
+      "dislikes": "<item>prejudice</item><item>minced meat</item><item>slow internet connection</item>"
     },
-    "projects": {
-      "title": "Featured Projects",
-      "geological": "Restoration and Simulation of Geological Models Software"
-    },
-    "about": {
-      "title": "About Me",
-      "description": "<paragraph>I'm a curious individual that loves to learn about how things work and languages. I'm specially passionate in trying to understand people's point of view and how their differences - be it cultural, geographical or others - impact on each individual's thoughts, feelings and how that affect how they interact with things. More often than not, you might find me tinkering with some old piece of tech that probably doesn't work anymore, but at least I'll try to understand how it used to work or give it a new meaning.</paragraph><paragraph>I've already studied a couple of languages, but I haven't had much time to practice or put them in use, but in general, I like learning new languages because it helps understand another's culture, history and even their thought process. Some of those languages: korean, french, spanish, chinese.</paragraph>",
-      "bubbles": {
-        "me": "<item>aquarius</item><item>infp</item><item>a+</item><item>lgtbqia+</item>",
-        "music": "<item>k-pop</item><item>punk rock</item><item>hip hop</item><item>country</item><small>(almost) everything</small>",
-        "likes": "<item>cats</item><item>time travel</item><item>games</item><item>digimon</item><item>photography</item>",
-        "dislikes": "<item>prejudice</item><item>minced meat</item><item>slow internet connection</item>"
-      }
-    },
-    "colophon": "Colophon"
+    "resume": {
+      "title": "Resume",
+      "file": "Resume"
+    }
+  },
+  "Colophon": {
+    "title": "Colophon",
+    "fonts": "Fonts",
+    "icons": "Icons",
+    "technology": "Technology"
   },
   "Project": {
     "Geological": {

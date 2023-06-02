@@ -1,5 +1,6 @@
-import NavigationMenu from '@/components/Navigation'
 import { useTranslations } from 'next-intl'
+import { useRouter } from 'next/router'
+import { FC } from 'react'
 // import '../../styles/Project.css'
 
 // import Image from '../../components/Project/ProjectImage'
@@ -7,18 +8,23 @@ import { useTranslations } from 'next-intl'
 // import Process from '../../assets/projects/geological/process.webp'
 // import MultipleScreens from '../../assets/projects/geological/multiple_screens.webp'
 
-function Geological() {
+interface ProjectProps {
+  params: {
+    projectId: string
+  }
+}
+
+const Project: FC<ProjectProps> = ({ params }) => {
   const t = useTranslations('Project.Geological')
+  // const router = useRouter()
 
   return (
-    <main className='project'>
-      <section className='project__header'>
-        <h1>{t('title')}</h1>
-        <h2>{t('description')}</h2>
-        <h3>{t('detail')}</h3>
-        <NavigationMenu />
-      </section>
-      <div className='project__description'>
+    <>
+      <div>
+        <p>{params.projectId}</p>
+        {/* <p>{router.query.projectId}</p> */}
+      </div>
+      {/* <div className='project__description'>
         <section>
           <h4>Project Overview</h4>
 
@@ -33,7 +39,7 @@ function Geological() {
             paragraph: (chunks) => <p>{chunks}</p>,
           })}
         </section>
-      </div>
+      </div> */}
       {/* <section className='project__gallery'>
         <Image
           imageSrc={Process}
@@ -44,14 +50,14 @@ function Geological() {
           imageAltText='Multiple software screens'
         />
       </section> */}
-      <section>
+      {/* <section>
         <p className='py-16 text-center'>
           This project is owned by <em>PETROBRAS</em> and{' '}
           <em>Tecgraf/PUC-Rio Institute</em>.<br /> (c) All Rights Reserved.
         </p>
-      </section>
-    </main>
+      </section> */}
+    </>
   )
 }
 
-export default Geological
+export default Project

@@ -7,43 +7,77 @@ import { CircleFlag } from 'react-circle-flags'
 import { CgMail } from 'react-icons/cg'
 import styles from '@/app/[locale]/styles.module.css'
 
-export default function NavigationMenu() {
+const NavigationMenu = () => {
   const t = useTranslations('NavigationMenu')
   const pathname = usePathname()
+  const pathHome = pathname === '/'
+
+  const scrollTo = (e: any) => {
+    const element = e.target.getAttribute('href')
+    const elementId = document.getElementById(element)
+
+    if (pathHome === true) {
+      e.preventDefault()
+    }
+
+    setTimeout(() => {
+      if (elementId) {
+        if (elementId !== null) {
+          elementId.scrollIntoView({
+            behavior: 'smooth',
+          })
+        }
+      } else {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })
+      }
+    }, 100)
+  }
+
+  let currentLocale = t('locale') === 'en'
 
   return (
     <nav className={styles.navigation}>
       <Link
         href='/'
         className={styles.navigation__logo}
+        onClick={scrollTo}
       >
         benilio.
       </Link>
       <ul className={styles.navigation__items}>
         <li>
           <Link
-            href='#projects'
+            href='projects'
             className={styles.navigation__item}
+            scroll={false}
+            onClick={scrollTo}
           >
             {t('projects')}
           </Link>
         </li>
         <li>
           <Link
-            href='#about'
+            href='about'
             className={styles.navigation__item}
+            scroll={false}
+            onClick={scrollTo}
           >
             {t('about')}
           </Link>
         </li>
         <li>
-          <Link
-            href='#contact'
-            passHref={true}
+          <a
+            href={`/BenicioOliveira_${t('resume.file')}.pdf`}
             className={styles.navigation__item}
+            // download={`BenicioOliveira_${t('resume.file')}`}
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            {t('resume')}
-          </Link>
+            {t('resume.title')}
+          </a>
         </li>
       </ul>
       <ul className={styles.navigation__plus}>
@@ -57,7 +91,9 @@ export default function NavigationMenu() {
           </Link>
         </li>
         <ul className={styles.navigation__locale}>
-          <li>
+          <li
+            className={currentLocale ? '' : styles.navigation__locale__inactive}
+          >
             <Link
               href={pathname}
               locale='en'
@@ -69,7 +105,9 @@ export default function NavigationMenu() {
               />
             </Link>
           </li>
-          <li>
+          <li
+            className={currentLocale ? styles.navigation__locale__inactive : ''}
+          >
             <Link
               href={pathname}
               locale='pt'
@@ -86,3 +124,5 @@ export default function NavigationMenu() {
     </nav>
   )
 }
+
+export default NavigationMenu
