@@ -1,0 +1,77 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* common / global */
+  .navigation {
+    @apply flex items-center justify-between px-12 py-8;
+  }
+
+  .navigation__logo {
+    @apply font-title text-4xl text-gray-50 cursor-pointer transition ease-in duration-500;
+  }
+
+  .navigation__logo:hover {
+    @apply text-green-400 ease-in duration-300;
+  }
+
+  .navigation__items {
+    @apply flex items-center justify-center gap-8;
+  }
+
+  .navigation__item {
+    @apply font-subtitle uppercase;
+  }
+
+  .navigation__plus {
+    @apply flex items-center justify-between;
+  }
+
+  .section {
+    @apply mx-auto container px-24;
+  }
+
+  /* home */
+
+  .section_heading {
+    @apply font-title text-6xl py-24;
+  }
+
+  .project_heading {
+    @apply absolute bottom-0 font-title lowercase px-16 py-12 text-4xl [text-shadow:_0_3px_6px_rgb(0_0_0_/_25%)];
+  }
+
+  .project_container {
+    @apply col-span-9 even:col-start-2 relative rounded-lg overflow-clip block;
+  }
+
+  .project_container__background {
+    @apply bg-black/25 absolute top-0 h-full w-full;
+  }
+
+  .project_container__gradient {
+    @apply bg-gradient-to-t from-gray-900/80 to-transparent absolute bottom-0 h-1/2 w-full;
+  }
+
+  .colophon_heading {
+    @apply font-subtitle text-xl;
+  }
+
+  /* project page */
+
+  .pp_title {
+    @apply font-title text-3xl lowercase;
+  }
+
+  .pp_team {
+    @apply font-subtitle text-lg;
+  }
+
+  .pp_detail {
+    @apply font-body text-lg;
+  }
+
+  .pp_heading {
+    @apply font-subtitle text-base font-semibold;
+  }
+}

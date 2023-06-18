@@ -20,8 +20,12 @@
         "name": "next"
       }
     ],
+    // "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@*": ["./*"],
+      "@/*": ["./app/*"],
+      "@/site/*": ["./app/(site)/*"],
+      "@/sanity/*": ["./sanity/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

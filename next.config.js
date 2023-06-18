@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    deviceSizes: [500, 800, 1080, 1600, 2000, 2600, 3200],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+      },
+    ],
+  },
+}
 
-const withNextIntl = require('next-intl/plugin')(
-  // This is the default (also the `src` folder is supported out of the box)
-  './i18n.ts',
-)
-
-module.exports = withNextIntl(nextConfig)
+module.exports = nextConfig
