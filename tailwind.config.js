@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         body: 'var(--ff-manrope)',
+        bodyItalic: 'var(--ff-manrope-italic)',
         title: 'var(--ff-dirtyline)',
+        titleKorean: 'var(--ff-nanum)',
         subtitle: 'var(--ff-unbounded)',
       },
       colors: {

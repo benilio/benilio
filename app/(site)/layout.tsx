@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
-import { Manrope, Unbounded } from '@next/font/google'
-import localFont from '@next/font/local'
+import { Manrope, Unbounded, Nanum_Pen_Script } from 'next/font/google'
+import localFont from 'next/font/local'
 import NavigationMenu from '@/components/Navigation'
 import '@/site/globals.css'
 import { Metadata } from 'next'
@@ -43,6 +43,36 @@ const unbounded = Unbounded({
   subsets: ['latin'],
   display: 'swap', // performance issue
   variable: '--ff-unbounded',
+})
+const nanumPenScript = Nanum_Pen_Script({
+  fallback: [
+    'cursive'
+  ],
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap', // performance issue
+  variable: '--ff-nanum',
+})
+const manropeit = localFont({
+  src: '../fonts/Manrope.woff2',
+  fallback: [
+    '-apple-system',
+    'BlinkMacSystemFont',
+    'system-ui',
+    'sans-serif',
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+  ],
+
+  style: 'italic',
+  display: 'swap', // performance issue
+  variable: '--ff-manrope-italic',
 })
 const manrope = Manrope({
   fallback: [
@@ -102,13 +132,13 @@ const RootLayout = ({ children }: Props) => {
   return (
     <html
       lang='en'
-      className={`${dirtyline.variable} ${unbounded.variable} ${manrope.variable}`}
+      className={`${dirtyline.variable} ${unbounded.variable} ${nanumPenScript.variable} ${manrope.variable} ${manropeit.variable}`}
     >
       <body>
-        <header className='sticky top-0 bg-gray-700/60 z-10 backdrop-blur-lg'>
+        <header>
           <NavigationMenu />
         </header>
-        <main className='pb-24'>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   )

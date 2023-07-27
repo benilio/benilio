@@ -9,11 +9,11 @@ const Projects = async () => {
   return (
     <section
       id='projects'
-      className={`scroll-mt-24 ${styles.section}`}
+      className={`${styles.header_skipper} ${styles.section_width}`}
     >
       <h2 className={styles.section_heading}>Featured Projects</h2>
 
-      <div className='gap-y-16 grid grid-cols-10 grid-flow-row'>
+      <div className={styles.projects_container}>
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
@@ -25,6 +25,7 @@ const Projects = async () => {
               alt={project.alt}
               width='1601'
               height='1068'
+              className='object-cover'
             />
             <div className={styles.project_container__gradient}></div>
             <div className={styles.project_container__background}></div>

@@ -4,7 +4,13 @@ import Link from 'next/link'
 import { CgMail } from 'react-icons/cg'
 import styles from '@/site/styles.module.css'
 
+import useScrollPosition from '@app/hooks/ScrollPosition'
+import useWindowSize from '@app/hooks/WindowsSize'
+
 const NavigationMenu = () => {
+  const scrollPosition = useScrollPosition()
+  const size = useWindowSize()
+
   // const scrollTo = (e: any) => {
   //   const element = e.target.getAttribute('to')
   //   const elementId = document.getElementById(element)
@@ -64,7 +70,7 @@ const NavigationMenu = () => {
   // }
 
   return (
-    <nav className={styles.navigation}>
+    <nav className={`${styles.navigation} ${styles.section_width}`}>
       <Link
         href='/'
 
@@ -72,7 +78,8 @@ const NavigationMenu = () => {
         // onClick={scrollTo}
       >
         <div className={styles.navigation__logo}>
-          <span className='text-green-300'>B</span>enilio.
+          <span className='text-green-300'>B</span>
+          {size.width! <= 1000 ? '' : 'enilio.'}
         </div>
       </Link>
       <ul className={styles.navigation__items}>
@@ -110,15 +117,13 @@ const NavigationMenu = () => {
           </a>
         </li>
       </ul>
-      <div className={styles.navigation__plus}>
-        <Link
-          href='mailto:benilio129@gmail.com?Subject=👋 Hey, there!'
-          passHref={true}
-          className='text-2xl p-4 rounded-full bg-gray-500 flex'
-        >
-          <CgMail />
-        </Link>
-      </div>
+      <Link
+        href='mailto:benilio129@gmail.com?Subject=👋 Hey, there!'
+        passHref={true}
+        className={styles.navigation__mail}
+      >
+        <CgMail />
+      </Link>
     </nav>
   )
 }

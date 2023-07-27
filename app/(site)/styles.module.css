@@ -2,76 +2,195 @@
 @tailwind utilities;
 
 @layer components {
-  /* common / global */
-  .navigation {
-    @apply flex items-center justify-between px-12 py-8;
-  }
+    /* header / navigation */
+    .navigation {
+        @apply flex w-full items-center justify-between;
+    }
 
-  .navigation__logo {
-    @apply font-title text-4xl text-gray-50 cursor-pointer transition ease-in duration-500;
-  }
+    .navigation__logo {
+        @apply cursor-pointer font-title text-4xl text-gray-50 transition duration-500 ease-in;
+    }
 
-  .navigation__logo:hover {
-    @apply text-green-400 ease-in duration-300;
-  }
+    .navigation__logo:hover {
+        @apply text-green-400 duration-300 ease-in;
+    }
 
-  .navigation__items {
-    @apply flex items-center justify-center gap-8;
-  }
+    .navigation__items {
+        @apply hidden items-center justify-center gap-8 md:flex;
+    }
 
-  .navigation__item {
-    @apply font-subtitle uppercase;
-  }
+    .navigation__item {
+        @apply font-subtitle uppercase;
+    }
 
-  .navigation__plus {
-    @apply flex items-center justify-between;
-  }
+    .navigation__mail {
+        @apply rounded-full bg-gray-500 p-3 text-base md:p-4 md:text-2xl;
+    }
 
-  .section {
-    @apply mx-auto container px-24;
-  }
+    .header_skipper {
+        @apply scroll-mt-0;
+        /* @apply scroll-mt-24; */
+    }
 
-  /* home */
+    /* section */
+    .section_heading {
+        @apply pb-8 text-center font-title text-4xl md:text-left md:text-6xl;
+    }
 
-  .section_heading {
-    @apply font-title text-6xl py-24;
-  }
+    .section_width {
+        @apply max-w-[90rem] mx-auto;
+    }
 
-  .project_heading {
-    @apply absolute bottom-0 font-title lowercase px-16 py-12 text-4xl [text-shadow:_0_3px_6px_rgb(0_0_0_/_25%)];
-  }
+    /* home / hero */
+    .hero_section {
+        @apply flex min-h-[calc(100vh-7.5rem)] flex-col items-center justify-center;
+    }
 
-  .project_container {
-    @apply col-span-9 even:col-start-2 relative rounded-lg overflow-clip block;
-  }
+    .hero_main {
+        @apply flex flex-grow items-center justify-center;
+    }
 
-  .project_container__background {
-    @apply bg-black/25 absolute top-0 h-full w-full;
-  }
+    .hero_heading {
+        @apply font-title text-6xl lg:text-8xl;
+    }
 
-  .project_container__gradient {
-    @apply bg-gradient-to-t from-gray-900/80 to-transparent absolute bottom-0 h-1/2 w-full;
-  }
+    .hero_block {
+        @apply block;
+    }
 
-  .colophon_heading {
-    @apply font-subtitle text-xl;
-  }
+    .hero_text_start {
+        @apply mb-3 block font-subtitle text-base lg:mb-8 lg:text-xl;
+    }
 
-  /* project page */
+    .hero_text_detail {
+        @apply -mt-4 block py-2 font-subtitle text-sm text-gray-400 lg:mt-0 lg:inline-block lg:py-0 lg:text-xl;
+    }
 
-  .pp_title {
-    @apply font-title text-3xl lowercase;
-  }
+    .hero_subheading {
+        @apply font-subtitle text-base lg:w-3/5 lg:text-xl;
+    }
 
-  .pp_team {
-    @apply font-subtitle text-lg;
-  }
+    .hero_footer {
+        @apply flex flex-grow-0 flex-col items-center justify-center pb-6 text-[2rem];
+    }
 
-  .pp_detail {
-    @apply font-body text-lg;
-  }
+    .hero_scroll {
+        @apply mt-4 font-subtitle text-xs;
+    }
 
-  .pp_heading {
-    @apply font-subtitle text-base font-semibold;
-  }
+    /* home / project */
+    .project_heading {
+        @apply absolute bottom-0 px-4 py-3 font-body text-base font-bold leading-tight [text-shadow:_0_3px_6px_rgb(0_0_0_/_25%)] md:px-8 md:py-6 md:font-title md:text-4xl md:font-normal md:lowercase lg:px-16 lg:py-12;
+    }
+
+    .projects_container {
+        @apply flex flex-col gap-6 md:gap-12;
+    }
+
+    .project_container {
+        @apply relative block overflow-clip rounded-xl md:w-11/12 md:even:self-end;
+    }
+
+    .project_container__background {
+        @apply absolute top-0 h-full w-full bg-black/25;
+    }
+
+    .project_container__gradient {
+        @apply absolute bottom-0 h-full w-full bg-gradient-to-t from-gray-900/60 to-transparent md:h-1/2 md:from-gray-900/80;
+    }
+
+    /* home / about */
+    .about_container {
+        @apply flex flex-col gap-8 md:flex-row;
+    }
+
+    .about_left {
+        @apply flex flex-1 flex-col justify-between gap-8 md:gap-12;
+    }
+
+    .about_right {
+        @apply flex flex-1 flex-col gap-10 items-center justify-center;
+    }
+
+    .about_paragraph {
+        @apply font-body text-base leading-7 md:text-lg;
+    }
+
+    .about_paragraph_spacing {
+        @apply space-y-4;
+    }
+
+    .about_motto {
+        @apply flex flex-col items-center justify-center;
+    }
+
+    .about_motto_kr {
+        @apply font-titleKorean text-8xl
+    }
+
+    .about_motto_en {
+        @apply font-bodyItalic
+    }
+
+    .about_links {
+        @apply flex items-center justify-center gap-2 md:gap-4;
+    }
+
+    .about_link {
+        @apply rounded-full bg-gray-500 p-3 text-base md:p-4 md:text-2xl;
+    }
+
+    .about_resume {
+        @apply rounded-full bg-gray-500 px-4 py-2 font-subtitle text-base lowercase md:px-6 md:py-4 md:text-xl;
+    }
+
+    /* home / colophon */
+    .colophon_container {
+        @apply flex flex-col items-center justify-between gap-8 text-center md:flex-row md:items-start md:text-left;
+    }
+
+    .colophon_container a {
+        @apply text-lg md:text-base;
+    }
+
+    .colophon_extra {
+        @apply flex flex-col;
+    }
+
+    .colophon_heading {
+        @apply pb-1 font-subtitle text-2xl md:text-xl;
+    }
+
+    /* page / project */
+    .pp_description {
+        @apply flex flex-col gap-4 md:flex-row;
+    }
+
+    .pp_description p {
+        @apply leading-relaxed;
+    }
+
+    .pp_title {
+        @apply font-subtitle text-xl md:font-title md:text-3xl md:lowercase;
+    }
+
+    .pp_team {
+        @apply font-subtitle text-base md:text-lg;
+    }
+
+    .pp_detail {
+        @apply font-body text-base md:text-lg;
+    }
+
+    .pp_heading {
+        @apply font-subtitle text-base font-semibold;
+    }
+
+    .pp_gallery {
+        @apply flex flex-col flex-wrap gap-4;
+    }
+
+    .pp_image {
+        @apply rounded-xl;
+    }
 }

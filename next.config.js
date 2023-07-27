@@ -8,6 +8,12 @@ const nextConfig = {
         hostname: 'cdn.sanity.io',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'lastfm.freetls.fastly.net',
+        port: '',
+        pathname: '/i/u/300x300/**',
+      },
     ],
   },
 }

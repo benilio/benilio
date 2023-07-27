@@ -40,19 +40,19 @@ const Project = async ({ params }: Props) => {
         <p className={styles.pp_detail}>{project.detail}</p>
       </section>
 
-      <section className={`${styles.section} flex flex-row gap-4 mb-6`}>
-        <div className='w-1/2'>
+      <section className={`${styles.section} ${styles.pp_description}`}>
+        <div className='flex-1'>
           <h3 className={styles.pp_heading}>Overview</h3>
           <PortableText value={project.overview} />
         </div>
-        <div className='w-1/2'>
+        <div className='flex-1'>
           <h3 className={styles.pp_heading}>Contributions</h3>
           <PortableText value={project.contributions} />
         </div>
       </section>
 
       <section className={styles.section}>
-        <div className='flex flex-1 flex-col flex-wrap gap-4'>
+        <div className={styles.pp_gallery}>
           {project.gallery?.map((image, index) => (
             <Image
               key={index}
@@ -62,7 +62,7 @@ const Project = async ({ params }: Props) => {
               height={imageHeight[index]}
               sizes='100vw'
               quality={90}
-              className='rounded-lg'
+              className={styles.pp_image}
             />
           ))}
         </div>
