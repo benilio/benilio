@@ -14,7 +14,7 @@ const Home = () => {
             <div className={styles.hero}>
                 <h1 className={styles.hero__intro}>
                     <span className={styles.hero__intro__frstline}>
-                    Hey there! I'm <span className={styles.hero__intro__frstline__name}>Benício Oliveira</span>
+                    Hey there! I&apos;m <span className={styles.hero__intro__frstline__name}>Benício Oliveira</span>
                     </span>
                     <br/>
                     <span className={styles.hero__intro__scndline}>
@@ -27,7 +27,6 @@ const Home = () => {
                     <p className={styles.hero__quote__motto}>내일 아무도 몰라요</p>
                     <p className={styles.hero__quote__translation}>No one knows tomorrow.</p>
                 </div>
-                {/*<p>With almost 5 years of experience with </p>*/}
             </div>
 
             <section id="work" className={styles.work}>

@@ -18,7 +18,7 @@ const Work = async () => {
                             understanding of the geohistory, and obtain results in terms of tension measurement
                             concentration and deformation of these models.</p>
                         <p>Part of a system suite, alongside {" "}
-                            <Link href="../work/restoration-simulation-software">
+                            <Link href="../../work/restoration-simulation-software">
                                 Restoration and Simulation of Geological Models Software.
                             </Link>
                         </p>

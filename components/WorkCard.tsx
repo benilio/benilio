@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "@styles/modules/workcard.module.scss";
 
 type CardProps = {
-    imageUrl: staticImageData;
+    imageUrl: StaticImageData;
     imageAlt: string;
     title: string;
     type: string;

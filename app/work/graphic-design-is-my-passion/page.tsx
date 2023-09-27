@@ -46,10 +46,6 @@ const Work = async () => {
                 <Image src={Warm} alt="Cover image"/>
                 <Image src={Boiling} alt="Cover image"/>
             </section>
-
-            <footer className={styles.footer}>
-                <p>Oh! Such empty. Nothing to see here.</p>
-            </footer>
         </main>
     );
 };
