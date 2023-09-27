@@ -1,0 +1,17 @@
+//@use 'sass:color';
+@use '../partials/fonts' as ff;
+@use '../partials/colors' as clr;
+@import '../partials/mixins';
+
+$items: 2;
+$items-gap: 2rem;
+
+.grid {
+  @include flex(row, $gap: $items-gap, $wrap: wrap);
+  width: 100%;
+
+  & > * {
+    width: calc((100% - (($items - 1) * $items-gap)) / $items);
+  }
+}
+

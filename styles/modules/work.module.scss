@@ -1,0 +1,107 @@
+//@use 'sass:color';
+@use '../partials/fonts' as ff;
+@use '../partials/colors' as clr;
+@import '../partials/mixins';
+
+$items: 4;
+$items-gap: 2rem;
+
+.header {
+  @include flex(column, $items: center, $gap: 2rem);
+}
+
+.cover {
+  object-fit: cover;
+  height: 50vh;
+
+}
+
+.description {
+  @include flex(row, $gap: 2rem);
+  width: 100%;
+
+  &__wrapper {
+    @include flex(column, $gap: 1rem);
+    width: 100%;
+    background-color: clr.$grey-850;
+    padding: 2rem;
+    border-radius: 1vw;
+  }
+}
+
+.title {
+  width: 100%;
+  font-size: 3rem;
+  text-align: right;
+}
+
+.details {
+  @include flex(column, $gap: .4rem);
+  width: 100%;
+  flex-shrink: 2;
+
+  &__item {
+    @include flex(row, $items: center, $gap: 1.5rem);
+    width: 100%;
+    padding: .8rem;
+    border-radius: .4rem;
+
+    &__title {
+      font-size: 1rem;
+      color: clr.$grey-400;
+    }
+
+    &__description {
+      font-size: 1rem;
+      text-align: right;
+      flex-grow: 1;
+      color: clr.$grey-200;
+    }
+
+    &:nth-child(even) {
+      background-color: clr.$grey-800;
+    }
+
+    &:nth-child(odd) {
+      border: .15rem solid clr.$grey-800;
+    }
+  }
+
+}
+
+.body {
+  @include flex(row, $gap: $items-gap, $wrap: wrap);
+
+  &__wrapper {
+    @include flex(row, $gap: 1rem);
+    width: 100%;
+
+    &__spacer {
+      width: 100%;
+    }
+
+    &__text {
+      @include flex(column, $gap: 1rem);
+      width: 100%;
+      background-color: clr.$grey-850;
+      padding: 2rem;
+      border-radius: 1vw;
+
+      &__title {
+        font-size: 1.5rem;
+      }
+
+      &__paragraph {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.grid img {
+  width: calc((100% - (($items - 1) * $items-gap)) / $items);
+}
+
+.footer {
+  text-align: center;
+}

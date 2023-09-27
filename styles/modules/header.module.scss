@@ -1,0 +1,24 @@
+@use '../partials/colors' as clr;
+@import '../partials/mixins';
+
+.header {
+  @include flex(row, $items: center, $justify: space-between);
+  padding: 2rem 0;
+  border-bottom: 1px solid clr.$grey-850;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navigation {
+  @include bullet-none;
+  @include flex(row);
+  gap: 2rem;
+
+  &__buttons {
+    @include flex(row);
+    gap: 1rem;
+  }
+}

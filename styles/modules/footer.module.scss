@@ -1,0 +1,55 @@
+@use '../partials/fonts' as ff;
+@use '../partials/colors' as clr;
+@import '../partials/mixins';
+
+.footer {
+  @include flex(row, $gap: 4rem, $items: center, $justify: center);
+  @include bullet-none;
+  padding: 2rem 0;
+  border-top: 1px solid clr.$grey-850;
+}
+
+.links {
+  @include flex(column, $gap: 1rem, $items: center, $justify: center);
+
+  &__sitemap {
+    @include flex(row, $gap: .5rem)
+  }
+
+  &__social {
+    @include flex(row, $gap: 1rem);
+    background-color: clr.$grey-800;
+    padding: 1rem 1.5rem .75rem;
+    border-radius: 4rem;
+    font-size: 1.25rem;
+  }
+
+}
+
+
+.jukebox {
+  @include flex(row, $gap: 1rem, $items: center);
+  background-color: clr.$grey-800;
+  border: 1px solid clr.$grey-700;
+  padding: .75rem 1rem .75rem .75rem;
+  border-radius: .5rem;
+}
+
+.details {
+  @include flex(column, $gap: .125rem);
+
+  &__title {
+    font-size: 1rem;
+    font-weight: ff.$semibold;
+  }
+
+  &__artist {
+    font-size: .75rem;
+  }
+}
+
+.cover {
+  border-radius: .25rem;
+  width: 5rem;
+  height: 100%;
+}

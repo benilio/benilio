@@ -1,0 +1,8 @@
+@use '../partials/colors' as clr;
+@import '../partials/mixins';
+
+.card {
+  &__type {
+    color: clr.$grey-500;
+  }
+}
