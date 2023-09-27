@@ -27,7 +27,7 @@ const Work = async () => {
                             results in terms of these models’ deformation measurements concentration.
                         </p>
                         <p>Part of a system suite, alongside {" "}
-                            <Link href="../work/geomechanical-analysis-software">
+                            <Link href="../../work/geomechanical-analysis-software">
                                 Geomechanical Analysis Software.
                             </Link>
                         </p>

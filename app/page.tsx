@@ -14,7 +14,7 @@ const Home = () => {
             <div className={styles.hero}>
                 <h1 className={styles.hero__intro}>
                     <span className={styles.hero__intro__frstline}>
-                    Hey there! I'm <span className={styles.hero__intro__frstline__name}>Benício Oliveira</span>
+                    Hey there! I&apos;m <span className={styles.hero__intro__frstline__name}>Benício Oliveira</span>
                     </span>
                     <br/>
                     <span className={styles.hero__intro__scndline}>
