@@ -34,32 +34,32 @@ const Footer = () => {
                 <ul className={styles.links__social}>
                     <li>
                         <a href="https://br.linkedin.com/in/ben%C3%ADcio-oliveira-458158135">
-                            <FaLinkedinIn/>
+                            <FaLinkedinIn title="LinkedIn" />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.behance.net/benilio">
-                            <FaBehance/>
+                            <FaBehance title="Behance" />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/beniliov/">
-                            <FaInstagram/>
+                            <FaInstagram title="Instagram" />
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/benilio">
-                            <FaGithub/>
+                            <FaGithub title="Github" />
                         </a>
                     </li>
                     {/*<li>*/}
                     {/*    <a href="https://codepen.io/beniliov">*/}
-                    {/*        <FaCodepen/>*/}
+                    {/*        <FaCodepen title="Codepen" />*/}
                     {/*    </a>*/}
                     {/*</li>*/}
                     <li>
                         <a href="https://www.frontendmentor.io/profile/benilio">
-                            <FaCode/>
+                            <FaCode title="Frontend Mentor" />
                         </a>
                     </li>
                 </ul>
